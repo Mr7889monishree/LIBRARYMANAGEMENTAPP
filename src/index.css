@@ -52,7 +52,7 @@ code {
   background-image: url(./section.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 95vw;
+  width: 99vw;
   height: 90vh;
   margin-top: -1.5%;
   color: white;
@@ -234,45 +234,34 @@ code {
 @media screen and (width<412px) {
   .App-header header{
     width: 10%;
-    
+    position: absolute;
+    left: 0.3%; 
   }
     
   .Nav ul{
     position: absolute;
-    left: 55%;
+    left: 28%;
+    margin-top: -70px;
     z-index: 2;
-    background-color: black;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(0,0,0,0.7);
+    width: 20%;
 
-  }
-  .NavForm button{
-    position: absolute;
-    left: 115%;
-    padding: 0.7rem;
-    border-radius: 10px;
-  }
-  .NavForm button:hover 
-  .Nav ul{
-   display: block;
   }
   .Nav ul li{
     color: white;
     font-size: 15px;
     
   }
-  .Nav form{
+  .Nav  nav form{
     position: absolute;
-    left:20%;
+    margin-top: -75px;
+    margin-left:35%;
     width: 30vw;
   
   }
-  .Nav input{
+  .Nav  form input{
     padding: 0.7rem;
-    width: 10vw;
+    width: 15vw;
   
   }
   /* .About,.Footer{
@@ -417,7 +406,7 @@ code {
   }
   .overlay{
     position: absolute;
-    top: 10%;
+    top: 12%;
     bottom: 0%;
     background-color: rgba(0,0,0,0.5);
     width: 100%;
@@ -425,10 +414,10 @@ code {
     z-index: 1;
   }
   .image button{
-    padding: 0.5rem;
-    margin-bottom: -55%;
+    padding: 1rem;
+    margin: 0.5rem;
     z-index: 1;
-    width: 35%;
+    width: 20%;
     border-radius: 10px;
     border-color: transparent;
     animation: show 1s 0.5s forwards normal ease-in-out;
@@ -448,9 +437,8 @@ code {
       transform: translateY(0),scaleY(1);
     }
   }
-  
-  .image h3{
-    padding: 1rem;
+  .image h1{
+    padding: 3rem;
     z-index: 2;
     margin:1rem;
     align-items: center;
@@ -458,7 +446,18 @@ code {
     text-shadow: 2px 2px 5px black;
     font-size: 40px;
     font-style: italic;
-    word-spacing: 5px;
+    word-spacing: 20px;
+  }
+  .image h3{
+    padding: 3rem;
+    z-index: 2;
+    margin:1rem;
+    align-items: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px black;
+    font-size: 40px;
+    font-style: italic;
+    word-spacing: 10px;
   
   }
   

@@ -6,8 +6,9 @@ const Main = () => {
     <main className='image'>
         <div className="overlay">
         <h1>Welcome To Library Plus
-        "Every Day is a fresh Start......"
         </h1>
+        <h3>        "Every Day is a fresh Start......"
+</h3>
         
           <br />
         <Link to='/home' ><button>Next </button></Link>      
