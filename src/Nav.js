@@ -5,7 +5,7 @@ const Nav = ({searchbook,setsearchbooks}) => {
   return (
     <main className='Nav'>
         <nav>
-          <form onSubmit={(e)=> e.preventDefault()}>
+          <form onSubmit={(e)=> e.preventDefault()} className='NavForm'>
             <input 
             id='search'
             type="text"
@@ -13,7 +13,9 @@ const Nav = ({searchbook,setsearchbooks}) => {
             value={searchbook}
             onChange={(e)=>setsearchbooks(e.target.value)}
              />
-          </form>
+
+          
+
             <ul >
               <li><Link to='/main' style={{color:'white', textDecoration:'none'}}>Home</Link></li>
                 <li><Link to='/home' style={{color:'white', textDecoration:'none'}}>Books Section</Link></li>
@@ -22,6 +24,8 @@ const Nav = ({searchbook,setsearchbooks}) => {
                 <li><Link style={{color:'white',textDecoration:'none'}} to='/signin'>SignIn</Link></li>
                 
             </ul>
+            </form>
+            
         </nav>
     </main>
   )

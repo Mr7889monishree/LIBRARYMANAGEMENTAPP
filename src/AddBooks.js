@@ -28,7 +28,7 @@ const AddBooks = ({returnbookName,setreturnbook,returnbookdate,setbookdate,hande
                 />
             </p>
              
-            <button>
+            <button className='button'>
                 Submit
             </button>
         </form>
