@@ -6,25 +6,12 @@ import './index.css'
 import Header from './Header';
 import Home from './Home';
 import Nav from './Nav';
-import {Routes,Route, useNavigate} from 'react-router-dom'
+import {Routes,Route, useNavigate, json} from 'react-router-dom'
 import Signin from './Signin';
 import Main from './Main';
 
 function App() {
-  const [Books,setBooks]=useState([{
-    id:1,
-    title:'Signals and System',
-    date:new Date(),
-    returndate:'12:02:24'
-
-  },
-  {
-    id:2,
-    title:'Signals and System',
-    date:new Date(),
-    returndate:'12:02:24'
-
-  }])
+  const [Books,setBooks]=useState(JSON.parse(localStorage.getItem("libraryApp"))||[])
   const [searchbook,setsearchbooks]=useState('')
   const [returnbookName,setreturnbook]=useState('')
   const [returnbookdate,setbookdate]=useState('')
