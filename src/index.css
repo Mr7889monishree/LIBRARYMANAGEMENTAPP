@@ -234,7 +234,6 @@ code {
 @media screen and (width<412px) {
   .App-header header{
     width: 10%;
-    margin-left: -999999%;
     
   }
     
