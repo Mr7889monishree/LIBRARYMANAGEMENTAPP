@@ -5,9 +5,1376 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 100%;
+  min-height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.Nav ul{
+  position: absolute;
+  margin-top: -65px;
+  margin-left:80%;
+}
+.Nav ul li{
+  display: inline-block;
+  padding: 0.2rem;
+  margin: 0.5rem;
+  color: white;
+  font-size: 20px;
+  
+}
+.Nav form{
+  position: absolute;
+  margin-top: -59px;
+  margin-left:20%;
+
+}
+.Nav input{
+  padding: 0.8rem;
+  width: 20vw;
+
+}
+/* .About,.Footer{
+  display: flex;
+  flex-grow: 1;
+  overflow-y:auto;
+  background-color:#fff;
+  width: 80%;
+  height: 30vh;
+  justify-content: center;
+} */
+
+.Home{
+  background-image: url(./section.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 99vw;
+  height: 90vh;
+  margin-top: -1.5%;
+  color: white;
+  font-weight: bold;
+}
+.key-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.key{
+  background-color: rgba(0,0,0,0.9);
+  color: white;
+}
+.AddForm label{
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.AddForm input{
+  padding: 1.5rem;
+  width: 30vw;
+  border-radius: 20px;
+  border-color: transparent;
+}
+.AddForm input:hover{
+  box-shadow: 2px 2px 5px white;
+}
+.AddForm button{
+  padding: 1rem;
+  width: 15%;
+  padding: 1rem;
+  border-radius: 20px;
+  border-color: transparent;
+
+
+}
+.AddForm button:hover{
+  box-shadow: 2px 2px 5px white;
+}
+.button{
+  word-spacing: 20px;
+
+}
+.button:hover{
+  color: red;  
+}
+.About {
+  background-image: url(./blue.webp);
+  background-size: cover; /* or "100%" if you want it to cover the whole page */
+  background-repeat: no-repeat;
+  color: black;
+  font-size: 18px;
+  width: 100vw;
+  height: 100vh;
+
+}
+.AddForm{
+  background-image: url(./books.jpeg);
+  z-index: -1;
+  color: whitesmoke;
+  text-shadow: black;
+  width: 97.8vw;
+  height: 83vh;
+  padding: 1rem;
+  font-size: 20px;
+  align-items: center;
+}
+.SignInForm{
+  background-image: url(./books.jpeg);
+  z-index: -1;
+  color: whitesmoke;
+  text-shadow: black;
+  width: 97.8vw;
+  height: 83vh;
+  padding: 1rem;
+  font-size: 20px;
+  align-items: center;
+
+}
+.SignInForm label{
+  font-size: 25px;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  word-spacing: 20px;
+
+}
+.SignInForm input{
+  padding: 1.5rem;
+  width: 30vw;
+  border-radius: 20px;
+  border-color: transparent;
+}
+.SignInForm input:hover{
+  box-shadow: 2px 2px 5px white;
+}
+.SignInForm button{
+  padding: 1rem;
+  width: 15%;
+  padding: 1rem;
+  border-radius: 20px;
+  border-color: transparent;
+
+
+}
+.SignInForm button:hover{
+  box-shadow: 2px 2px 5px white;
+}
+.image{
+  width: 98.5vw;
+  height: 91vh;
+}
+.image{
+  background-image: url(./homepage.jpeg);
+  background-size: cover;
+  background-position: center;
+  margin-top: -1.1%;
+
+}
+.overlay{
+  position: absolute;
+  top: 11%;
+  bottom: 0%;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 89vh;
+  z-index: 1;
+}
+.image button{
+  padding: 1rem;
+  margin: 5rem;
+  z-index: 1;
+  width: 20%;
+  border-radius: 10px;
+  border-color: transparent;
+  animation: show 1s 0.5s forwards normal ease-in-out;
+  font-size: 18px;
+}
+.image button:hover{
+  color: red;
+}
+@keyframes show{
+  0%{
+    transform: translateY(80%);
+  }
+  80%{
+    transform:translateY(-50%), scaleY(1.2);
+  }
+  100%{
+    transform: translateY(0),scaleY(1);
+  }
+}
+.image h1{
+  padding: 3rem;
+  z-index: 2;
+  margin:1rem;
+  align-items: center;
+  color: whitesmoke;
+  text-shadow: 2px 2px 5px black;
+  font-size: 40px;
+  font-style: italic;
+  word-spacing: 20px;
+}
+.image h3{
+  padding: 3rem;
+  z-index: 2;
+  margin:1rem;
+  align-items: center;
+  color: whitesmoke;
+  text-shadow: 2px 2px 5px black;
+  font-size: 40px;
+  font-style: italic;
+  word-spacing: 10px;
+
+}
+@media screen and (width<412px) {
+  .App-header header{
+    width: 10%;
+    margin-left: -999999%;
+    
+  }
+    
+  .Nav ul{
+    position: absolute;
+    margin-top: -70px;
+    margin-left:-76%;
+    z-index: 2;
+  }
+  .Nav ul li{
+    color: white;
+    font-size: 15px;
+    
+  }
+  .Nav form{
+    position: absolute;
+    margin-top: -75px;
+    margin-left:-10%;
+    width: 30vw;
+  
+  }
+  .Nav input{
+    padding: 0.7rem;
+    width: 10vw;
+  
+  }
+  /* .About,.Footer{
+    display: flex;
+    flex-grow: 1;
+    overflow-y:auto;
+    background-color:#fff;
+    width: 80%;
+    height: 30vh;
+    justify-content: center;
+  } */
+  
+  .Home{
+    background-image: url(./section.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 97vw;
+    height: 90vh;
+    margin-top: -1.1%;
+    color: white;
+    font-weight: bold;
+  }
+  .key-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .key{
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+  }
+  .AddForm label{
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .AddForm input{
+    padding: 1.5rem;
+    width: 30vw;
+    border-radius: 20px;
+    border-color: transparent;
+  }
+  .AddForm input:hover{
+    box-shadow: 2px 2px 5px white;
+  }
+  .AddForm button{
+    padding: 1rem;
+    width: 15%;
+    padding: 1rem;
+    border-radius: 20px;
+    border-color: transparent;
+  
+  
+  }
+  .AddForm button:hover{
+    box-shadow: 2px 2px 5px white;
+  }
+  .button{
+    word-spacing: 20px;
+  
+  }
+  .button:hover{
+    color: red;  
+  }
+  .About{
+    background-color: url(./blue.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    margin-top: -5.5%;
+    font-size: 18px;
+    width: 100%;
+    height: 200vh;
+  }
+  .AddForm{
+    background-image: url(./books.jpeg);
+    z-index: -1;
+    color: whitesmoke;
+    text-shadow: black;
+    width: 97.8vw;
+    height: 83vh;
+    padding: 1rem;
+    font-size: 20px;
+    align-items: center;
+  }
+  .SignInForm{
+    background-image: url(./books.jpeg);
+    z-index: -1;
+    color: whitesmoke;
+    text-shadow: black;
+    width: 97.8vw;
+    height: 83vh;
+    padding: 1rem;
+    font-size: 20px;
+    align-items: center;
+  
+  }
+  .SignInForm label{
+    font-size: 25px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    word-spacing: 20px;
+  
+  }
+  .SignInForm input{
+    padding: 0.9rem;
+    width: 30vw;
+    border-radius: 15px;
+    border-color: transparent;
+  }
+  .SignInForm input:hover{
+    box-shadow: 2px 2px 5px white;
+  }
+  .SignInForm button{
+    padding: 1rem;
+    width: 20%;
+    padding: 1rem;
+    border-radius: 20px;
+    border-color: transparent;
+  
+  
+  }
+  .SignInForm button:hover{
+    box-shadow: 2px 2px 5px white;
+  }
+  .image{
+    width: 99vw;
+    height: 91vh;
+  }
+  .image{
+    background-image: url(./homepage.jpeg);
+    background-size: cover;
+    background-position: center;
+    margin-top: -1.5%;
+  
+  }
+  .overlay{
+    position: absolute;
+    top: 12%;
+    bottom: 0%;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 89vh;
+    z-index: 1;
+  }
+  .image button{
+    padding: 1rem;
+    margin: 0.5rem;
+    z-index: 1;
+    width: 20%;
+    border-radius: 10px;
+    border-color: transparent;
+    animation: show 1s 0.5s forwards normal ease-in-out;
+    font-size: 18px;
+  }
+  .image button:hover{
+    color: red;
+  }
+  @keyframes show{
+    0%{
+      transform: translateY(80%);
+    }
+    80%{
+      transform:translateY(-50%), scaleY(1.2);
+    }
+    100%{
+      transform: translateY(0),scaleY(1);
+    }
+  }
+  .image h1{
+    padding: 3rem;
+    z-index: 2;
+    margin:1rem;
+    align-items: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px black;
+    font-size: 40px;
+    font-style: italic;
+    word-spacing: 20px;
+  }
+  .image h3{
+    padding: 3rem;
+    z-index: 2;
+    margin:1rem;
+    align-items: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px black;
+    font-size: 40px;
+    font-style: italic;
+    word-spacing: 10px;
+  
+  }
+  
+    
+}
+
+@media screen and (max-width:576px) {
+
+.App-header header{
+  width: 20%;
+  margin-top: -5%;
+  
+}
+  
+.Nav ul{
+  position: absolute;
+  margin-top: -40px;
+  margin-left:-10%;
+  z-index: 2;
+}
+.Nav ul li{
+  display: inline-block;
+  color: white;
+  font-size: 15px;
+  
+}
+.Nav form{
+  position: absolute;
+  margin-top: -75px;
+  margin-left:45%;
+  width: 30vw;
+
+}
+.Nav input{
+  padding: 0.7rem;
+  width: 10vw;
+
+}
+/* .About,.Footer{
+  display: flex;
+  flex-grow: 1;
+  overflow-y:auto;
+  background-color:#fff;
+  width: 80%;
+  height: 30vh;
+  justify-content: center;
+} */
+
+.Home{
+  background-image: url(./section.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 97vw;
+  height: 90vh;
+  margin-top: -1.1%;
+  color: white;
+  font-weight: bold;
+}
+.key-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.key{
+  background-color: rgba(0,0,0,0.9);
+  color: white;
+}
+.AddForm label{
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.AddForm input{
+  padding: 1.5rem;
+  width: 30vw;
+  border-radius: 20px;
+  border-color: transparent;
+}
+.AddForm input:hover{
+  box-shadow: 2px 2px 5px white;
+}
+.AddForm button{
+  padding: 1rem;
+  width: 15%;
+  padding: 1rem;
+  border-radius: 20px;
+  border-color: transparent;
+
+
+}
+.AddForm button:hover{
+  box-shadow: 2px 2px 5px white;
+}
+.button{
+  word-spacing: 20px;
+
+}
+.button:hover{
+  color: red;  
+}
+.About{
+  background-color: url(./blue.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+  margin-top: -5.5%;
+  font-size: 18px;
+  width: 100%;
+  height: 200vh;
+}
+.AddForm{
+  background-image: url(./books.jpeg);
+  z-index: -1;
+  color: whitesmoke;
+  text-shadow: black;
+  width: 97.8vw;
+  height: 83vh;
+  padding: 1rem;
+  font-size: 20px;
+  align-items: center;
+}
+.SignInForm{
+  background-image: url(./books.jpeg);
+  z-index: -1;
+  color: whitesmoke;
+  text-shadow: black;
+  width: 97.8vw;
+  height: 83vh;
+  padding: 1rem;
+  font-size: 20px;
+  align-items: center;
+
+}
+.SignInForm label{
+  font-size: 25px;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  word-spacing: 20px;
+
+}
+.SignInForm input{
+  padding: 0.9rem;
+  width: 30vw;
+  border-radius: 15px;
+  border-color: transparent;
+}
+.SignInForm input:hover{
+  box-shadow: 2px 2px 5px white;
+}
+.SignInForm button{
+  padding: 1rem;
+  width: 20%;
+  padding: 1rem;
+  border-radius: 20px;
+  border-color: transparent;
+
+
+}
+.SignInForm button:hover{
+  box-shadow: 2px 2px 5px white;
+}
+.image{
+  width: 99vw;
+  height: 91vh;
+}
+.image{
+  background-image: url(./homepage.jpeg);
+  background-size: cover;
+  background-position: center;
+  margin-top: -1.5%;
+
+}
+.overlay{
+  position: absolute;
+  top: 12%;
+  bottom: 0%;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 89vh;
+  z-index: 1;
+}
+.image button{
+  padding: 1rem;
+  margin: 0.5rem;
+  z-index: 1;
+  width: 20%;
+  border-radius: 10px;
+  border-color: transparent;
+  animation: show 1s 0.5s forwards normal ease-in-out;
+  font-size: 18px;
+}
+.image button:hover{
+  color: red;
+}
+@keyframes show{
+  0%{
+    transform: translateY(80%);
+  }
+  80%{
+    transform:translateY(-50%), scaleY(1.2);
+  }
+  100%{
+    transform: translateY(0),scaleY(1);
+  }
+}
+.image h1{
+  padding: 3rem;
+  z-index: 2;
+  margin:1rem;
+  align-items: center;
+  color: whitesmoke;
+  text-shadow: 2px 2px 5px black;
+  font-size: 40px;
+  font-style: italic;
+  word-spacing: 20px;
+}
+.image h3{
+  padding: 3rem;
+  z-index: 2;
+  margin:1rem;
+  align-items: center;
+  color: whitesmoke;
+  text-shadow: 2px 2px 5px black;
+  font-size: 40px;
+  font-style: italic;
+  word-spacing: 10px;
+
+}
+
+  
+}
+@media screen and (max-width:768px) {
+  .App-header header{
+    width: 20%;
+    margin-top: -5%;
+    
+  }
+    
+  .Nav ul{
+    position: absolute;
+    margin-top: -75px;
+    margin-left:40%;
+    z-index: 2;
+  }
+  .Nav ul li{
+    display: inline-block;
+    color: white;
+    font-size: 15px;
+    
+  }
+  .Nav form{
+    position: absolute;
+    margin-top: -75px;
+    margin-left:24%;
+    width: 30vw;
+  
+  }
+  .Nav input{
+    padding: 0.7rem;
+    width: 10vw;
+  
+  }
+  /* .About,.Footer{
+    display: flex;
+    flex-grow: 1;
+    overflow-y:auto;
+    background-color:#fff;
+    width: 80%;
+    height: 30vh;
+    justify-content: center;
+  } */
+  
+  .Home{
+    background-image: url(./section.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 99vw;
+    height: 90vh;
+    margin-top: -1.1%;
+    color: white;
+    font-weight: bold;
+  }
+  .key-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .key{
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+  }
+  .AddForm label{
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .AddForm input{
+    padding: 1.5rem;
+    width: 30vw;
+    border-radius: 20px;
+    border-color: transparent;
+  }
+  .AddForm input:hover{
+    box-shadow: 2px 2px 5px white;
+  }
+  .AddForm button{
+    padding: 1rem;
+    width: 15%;
+    padding: 1rem;
+    border-radius: 20px;
+    border-color: transparent;
+  
+  
+  }
+  .AddForm button:hover{
+    box-shadow: 2px 2px 5px white;
+  }
+  .button{
+    word-spacing: 20px;
+  
+  }
+  .button:hover{
+    color: red;  
+  }
+  .About{
+    background-color: url(./blue.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    margin-top: -5.5%;
+    font-size: 18px;
+    width: 100%;
+    height: 200vh;
+  }
+  .AddForm{
+    background-image: url(./books.jpeg);
+    z-index: -1;
+    color: whitesmoke;
+    text-shadow: black;
+    width: 97.8vw;
+    height: 83vh;
+    padding: 1rem;
+    font-size: 20px;
+    align-items: center;
+  }
+  .SignInForm{
+    background-image: url(./books.jpeg);
+    z-index: -1;
+    color: whitesmoke;
+    text-shadow: black;
+    width: 97.8vw;
+    height: 83vh;
+    padding: 1rem;
+    font-size: 20px;
+    align-items: center;
+  
+  }
+  .SignInForm label{
+    font-size: 25px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    word-spacing: 20px;
+  
+  }
+  .SignInForm input{
+    padding: 0.9rem;
+    width: 30vw;
+    border-radius: 15px;
+    border-color: transparent;
+  }
+  .SignInForm input:hover{
+    box-shadow: 2px 2px 5px white;
+  }
+  .SignInForm button{
+    padding: 1rem;
+    width: 20%;
+    padding: 1rem;
+    border-radius: 20px;
+    border-color: transparent;
+  
+  
+  }
+  .SignInForm button:hover{
+    box-shadow: 2px 2px 5px white;
+  }
+  .image{
+    width: 99vw;
+    height: 91vh;
+  }
+  .image{
+    background-image: url(./homepage.jpeg);
+    background-size: cover;
+    background-position: center;
+    margin-top: -1.5%;
+  
+  }
+  .overlay{
+    position: absolute;
+    top: 12%;
+    bottom: 0%;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 89vh;
+    z-index: 1;
+  }
+  .image button{
+    padding: 1rem;
+    margin: 0.5rem;
+    z-index: 1;
+    width: 20%;
+    border-radius: 10px;
+    border-color: transparent;
+    animation: show 1s 0.5s forwards normal ease-in-out;
+    font-size: 18px;
+  }
+  .image button:hover{
+    color: red;
+  }
+  @keyframes show{
+    0%{
+      transform: translateY(80%);
+    }
+    80%{
+      transform:translateY(-50%), scaleY(1.2);
+    }
+    100%{
+      transform: translateY(0),scaleY(1);
+    }
+  }
+  .image h1{
+    padding: 3rem;
+    z-index: 2;
+    margin:1rem;
+    align-items: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px black;
+    font-size: 40px;
+    font-style: italic;
+    word-spacing: 20px;
+  }
+  .image h3{
+    padding: 3rem;
+    z-index: 2;
+    margin:1rem;
+    align-items: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px black;
+    font-size: 40px;
+    font-style: italic;
+    word-spacing: 10px;
+  
+  }
+  
+}
+@media  screen and (max-width:991px) {
+  .App-header header{
+    width: 15%;
+    margin-top: -5%;
+    
+  }
+    
+  .Nav ul{
+    position: absolute;
+    margin-top: -75px;
+    margin-left:40%;
+    z-index: 2;
+  }
+  .Nav ul li{
+    display: inline-block;
+    color: white;
+    font-size: 15px;
+    
+  }
+  .Nav form{
+    position: absolute;
+    margin-top: -75px;
+    margin-left:24%;
+    width: 30vw;
+  
+  }
+  .Nav input{
+    padding: 0.7rem;
+    width: 10vw;
+  
+  }
+  /* .About,.Footer{
+    display: flex;
+    flex-grow: 1;
+    overflow-y:auto;
+    background-color:#fff;
+    width: 80%;
+    height: 30vh;
+    justify-content: center;
+  } */
+  
+  .Home{
+    background-image: url(./section.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 99vw;
+    height: 90vh;
+    margin-top: -1.1%;
+    color: white;
+    font-weight: bold;
+  }
+  .key-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .key{
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+  }
+  .AddForm label{
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .AddForm input{
+    padding: 1.5rem;
+    width: 30vw;
+    border-radius: 20px;
+    border-color: transparent;
+  }
+  .AddForm input:hover{
+    box-shadow: 2px 2px 5px white;
+  }
+  .AddForm button{
+    padding: 1rem;
+    width: 15%;
+    padding: 1rem;
+    border-radius: 20px;
+    border-color: transparent;
+  
+  
+  }
+  .AddForm button:hover{
+    box-shadow: 2px 2px 5px white;
+  }
+  .button{
+    word-spacing: 20px;
+  
+  }
+  .button:hover{
+    color: red;  
+  }
+  .About{
+    background-color: url(./blue.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    margin-top: -5.5%;
+    font-size: 18px;
+    width: 100%;
+    height: 200vh;
+  }
+  .AddForm{
+    background-image: url(./books.jpeg);
+    z-index: -1;
+    color: whitesmoke;
+    text-shadow: black;
+    width: 97.8vw;
+    height: 83vh;
+    padding: 1rem;
+    font-size: 20px;
+    align-items: center;
+  }
+  .SignInForm{
+    background-image: url(./books.jpeg);
+    z-index: -1;
+    color: whitesmoke;
+    text-shadow: black;
+    width: 97.8vw;
+    height: 83vh;
+    padding: 1rem;
+    font-size: 20px;
+    align-items: center;
+  
+  }
+  .SignInForm label{
+    font-size: 25px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    word-spacing: 20px;
+  
+  }
+  .SignInForm input{
+    padding: 0.9rem;
+    width: 30vw;
+    border-radius: 15px;
+    border-color: transparent;
+  }
+  .SignInForm input:hover{
+    box-shadow: 2px 2px 5px white;
+  }
+  .SignInForm button{
+    padding: 1rem;
+    width: 20%;
+    padding: 1rem;
+    border-radius: 20px;
+    border-color: transparent;
+  
+  
+  }
+  .SignInForm button:hover{
+    box-shadow: 2px 2px 5px white;
+  }
+  .image{
+    width: 99vw;
+    height: 91vh;
+  }
+  .image{
+    background-image: url(./homepage.jpeg);
+    background-size: cover;
+    background-position: center;
+    margin-top: -1.5%;
+  
+  }
+  .overlay{
+    position: absolute;
+    top: 12%;
+    bottom: 0%;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 89vh;
+    z-index: 1;
+  }
+  .image button{
+    padding: 1rem;
+    margin: 0.5rem;
+    z-index: 1;
+    width: 20%;
+    border-radius: 10px;
+    border-color: transparent;
+    animation: show 1s 0.5s forwards normal ease-in-out;
+    font-size: 18px;
+  }
+  .image button:hover{
+    color: red;
+  }
+  @keyframes show{
+    0%{
+      transform: translateY(80%);
+    }
+    80%{
+      transform:translateY(-50%), scaleY(1.2);
+    }
+    100%{
+      transform: translateY(0),scaleY(1);
+    }
+  }
+  .image h1{
+    padding: 3rem;
+    z-index: 2;
+    margin:1rem;
+    align-items: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px black;
+    font-size: 40px;
+    font-style: italic;
+    word-spacing: 20px;
+  }
+  .image h3{
+    padding: 3rem;
+    z-index: 2;
+    margin:1rem;
+    align-items: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px black;
+    font-size: 40px;
+    font-style: italic;
+    word-spacing: 10px;
+  
+  }
+}
+@media screen and (min-width:992px){
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+.App-header header{
+  width: 20%;
+  
+}
+  
+ 
+  
+  .Nav ul{
+    position: absolute;
+    margin-top: -65px;
+    margin-left:45%;
+  }
+  .Nav ul li{
+    display: inline-block;
+    padding: 0.2rem;
+    margin: 0.5rem;
+    color: white;
+    font-size: 20px;
+    
+  }
+  .Nav form{
+    position: absolute;
+    margin-top: -59px;
+    margin-left:20%;
+  
+  }
+  .Nav input{
+    padding: 0.8rem;
+    width: 20vw;
+  
+  }
+  /* .About,.Footer{
+    display: flex;
+    flex-grow: 1;
+    overflow-y:auto;
+    background-color:#fff;
+    width: 80%;
+    height: 30vh;
+    justify-content: center;
+  } */
+  
+  .Home{
+    background-image: url(./section.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 99vw;
+    height: 90vh;
+    margin-top: -1.1%;
+    color: white;
+    font-weight: bold;
+  }
+  .key-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .key{
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+  }
+  .AddForm label{
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .AddForm input{
+    padding: 1.5rem;
+    width: 30vw;
+    border-radius: 20px;
+    border-color: transparent;
+  }
+  .AddForm input:hover{
+    box-shadow: 2px 2px 5px white;
+  }
+  .AddForm button{
+    padding: 1rem;
+    width: 15%;
+    padding: 1rem;
+    border-radius: 20px;
+    border-color: transparent;
+  
+  
+  }
+  .AddForm button:hover{
+    box-shadow: 2px 2px 5px white;
+  }
+  .button{
+    word-spacing: 20px;
+  
+  }
+  .button:hover{
+    color: red;  
+  }
+  .About{
+    background-image: url(./blue.webp);
+    background-size: 100%;
+    height: 70vh;
+    background-repeat: repeat;
+    color: black;
+    margin-top: -1.7%;
+    font-size: 18px;
+  }
+  .AddForm{
+    background-image: url(./books.jpeg);
+    z-index: -1;
+    color: whitesmoke;
+    text-shadow: black;
+    width: 97.8vw;
+    height: 83vh;
+    padding: 1rem;
+    font-size: 20px;
+    align-items: center;
+  }
+  .SignInForm{
+    background-image: url(./books.jpeg);
+    z-index: -1;
+    color: whitesmoke;
+    text-shadow: black;
+    width: 97.8vw;
+    height: 83vh;
+    padding: 1rem;
+    font-size: 20px;
+    align-items: center;
+  
+  }
+  .SignInForm label{
+    font-size: 25px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    word-spacing: 20px;
+  
+  }
+  .SignInForm input{
+    padding: 1.5rem;
+    width: 30vw;
+    border-radius: 20px;
+    border-color: transparent;
+  }
+  .SignInForm input:hover{
+    box-shadow: 2px 2px 5px white;
+  }
+  .SignInForm button{
+    padding: 1rem;
+    width: 15%;
+    padding: 1rem;
+    border-radius: 20px;
+    border-color: transparent;
+  
+  
+  }
+  .SignInForm button:hover{
+    box-shadow: 2px 2px 5px white;
+  }
+  .image{
+    width: 99vw;
+    height: 91vh;
+  }
+  .image{
+    background-image: url(./homepage.jpeg);
+    background-size: cover;
+    background-position: center;
+    margin-top: -1.5%;
+  
+  }
+  .overlay{
+    position: absolute;
+    top: 13%;
+    bottom: 0%;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 89vh;
+    z-index: 1;
+  }
+  .image button{
+    padding: 1rem;
+    margin: 5rem;
+    z-index: 1;
+    width: 20%;
+    border-radius: 10px;
+    border-color: transparent;
+    animation: show 1s 0.5s forwards normal ease-in-out;
+    font-size: 18px;
+  }
+  .image button:hover{
+    color: red;
+  }
+  @keyframes show{
+    0%{
+      transform: translateY(80%);
+    }
+    80%{
+      transform:translateY(-50%), scaleY(1.2);
+    }
+    100%{
+      transform: translateY(0),scaleY(1);
+    }
+  }
+  .image h1{
+    padding: 3rem;
+    z-index: 2;
+    margin:1rem;
+    align-items: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px black;
+    font-size: 40px;
+    font-style: italic;
+    word-spacing: 20px;
+  }
+  .image h3{
+    padding: 3rem;
+    z-index: 2;
+    margin:1rem;
+    align-items: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px black;
+    font-size: 40px;
+    font-style: italic;
+    word-spacing: 10px;
+  
+  }
+  
+
 }
