@@ -5,7 +5,6 @@ import './App.css';
 import './index.css'
 import Header from './Header';
 import Home from './Home';
-import Missing from './Missing';
 import Nav from './Nav';
 import {Routes,Route, useNavigate} from 'react-router-dom'
 import Signin from './Signin';
@@ -57,7 +56,7 @@ function App() {
       <Header title="Library ManagementApp" />
       <Nav searchbook={searchbook} setsearchbooks={setsearchbooks}/>
       <Routes>
-      <Route path='/main' element={<Main/>}></Route>
+      <Route path='/' element={<Main/>}></Route>
       <Route path='/home' element={
       <Home Books={Books.filter((Books)=>(Books.title) && ((Books.title).toLowerCase()).includes(searchbook.toLowerCase()))}
       DeleteBook={DeleteBook}/>}/>
@@ -68,7 +67,6 @@ function App() {
       handelSubmit={handelSubmit}/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/signin' element={<Signin/>}/>
-      <Route path='*' element={<Missing/>}/>
       </Routes>
 
 

@@ -414,14 +414,13 @@ code {
     z-index: 1;
   }
   .image button{
-    padding: 1rem;
-    margin: 0.5rem;
     z-index: 1;
     width: 20%;
     border-radius: 10px;
     border-color: transparent;
     animation: show 1s 0.5s forwards normal ease-in-out;
     font-size: 18px;
+    transform: translateY(-100%);
   }
   .image button:hover{
     color: red;

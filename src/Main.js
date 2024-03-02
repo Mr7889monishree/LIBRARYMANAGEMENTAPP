@@ -8,7 +8,8 @@ const Main = () => {
         <h1>Welcome To Library Plus
         </h1>
         <h3>        "Every Day is a fresh Start......"
-</h3>
+          
+        </h3>
         
           <br />
         <Link to='/home' ><button>Next </button></Link>      

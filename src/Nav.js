@@ -18,7 +18,7 @@ const Nav = ({searchbook,setsearchbooks}) => {
           
 
             <ul >
-              <li><Link to='/main' style={{color:'white', textDecoration:'none'}}>Home</Link></li>
+              <li><Link to='/' style={{color:'white', textDecoration:'none'}}>Home</Link></li>
                 <li><Link to='/home' style={{color:'white', textDecoration:'none'}}>Books Section</Link></li>
                 <li><Link to='/addbooks' style={{color:'white',textDecoration:'none'}}>Add Books</Link></li>
                 <li><Link to='/about' style={{color:'white',textDecoration:'none'}}>About</Link></li>
