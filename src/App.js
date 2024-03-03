@@ -14,7 +14,7 @@ function App() {
 
   
   
-  const [Books,setBooks]=useState([])
+  const [Books,setBooks]=useState(JSON.parse(localStorage.getItem("libraryapp") ) || [])
   const [searchbook,setsearchbooks]=useState('')
   const [returnbookName,setreturnbook]=useState('')
   const [returnbookdate,setbookdate]=useState('')
@@ -36,7 +36,6 @@ function App() {
   const DeleteBook=(id)=>{
     
       const listBooks=Books.filter((book)=> book.id!==id)
-         
       setBooks(listBooks)
       localStorage.setItem("libraryapp",JSON.stringify(listBooks))
 
