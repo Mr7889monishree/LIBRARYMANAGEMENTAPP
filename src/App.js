@@ -6,17 +6,18 @@ import './index.css'
 import Header from './Header';
 import Home from './Home';
 import Nav from './Nav';
-import {Routes,Route, useNavigate, json} from 'react-router-dom'
+import {Routes,Route, useNavigate} from 'react-router-dom'
 import Signin from './Signin';
 import Main from './Main';
 
 function App() {
-  const [Books,setBooks]=useState(JSON.parse(localStorage.getItem("libraryApp"))||[])
+  
+  const [Books,setBooks]=useState([])
   const [searchbook,setsearchbooks]=useState('')
   const [returnbookName,setreturnbook]=useState('')
   const [returnbookdate,setbookdate]=useState('')
   const navigate=useNavigate('')
-  const handelSubmit=(e)=>{
+  const handelSubmit=async(e)=>{
     e.preventDefault()
     const id=Books.length ? Books[Books.length-1].id+1:1;
     const date=new Date()
@@ -26,25 +27,23 @@ function App() {
     setreturnbook('')
     setbookdate('')
     navigate('/home')
-    localStorage.setItem("libraryApp",JSON.stringify(books))
-
+   
 
   }
-  const DeleteBook=(id)=>{
+  const DeleteBook=async(id)=>{
     const listBooks=Books.filter((book)=> book.id!==id)
     setBooks(listBooks)
-    localStorage.setItem("libraryApp",JSON.stringify(listBooks))
-
   }
 
   return (
 
     <div className="App">
-      <Header title="Library ManagementApp" />
+
+      <Header />
       <Nav searchbook={searchbook} setsearchbooks={setsearchbooks}/>
       <Routes>
       <Route path='/' element={<Main/>}></Route>
-      <Route path='/home' element={
+       <Route path='/home' element={
       <Home Books={Books.filter((Books)=>(Books.title) && ((Books.title).toLowerCase()).includes(searchbook.toLowerCase()))}
       DeleteBook={DeleteBook}/>}/>
       <Route path='/addbooks' element={<AddBooks returnbookName={returnbookName}
