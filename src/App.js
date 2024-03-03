@@ -54,8 +54,8 @@ function App() {
   }
   const DeleteBook=async(id)=>{
     try{
-      await api.delete(`/books/${id}`)
       const listBooks=Books.filter((book)=> book.id!==id)
+      await api.delete(`/books/${id}`,listBooks)   
       setBooks(listBooks)
       localStorage.setItem("libraryapp",JSON.stringify(listBooks))
 
