@@ -14,7 +14,7 @@ function App() {
 
   
   
-  const [Books,setBooks]=useState(JSON.parse(localStorage.getItem("libraryapp") ) || [])
+  const [Books,setBooks]=useState([])
   const [searchbook,setsearchbooks]=useState('')
   const [returnbookName,setreturnbook]=useState('')
   const [returnbookdate,setbookdate]=useState('')
