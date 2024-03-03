@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import About from './About';
 import AddBooks from './AddBooks';
 import './App.css';
@@ -9,8 +9,23 @@ import Nav from './Nav';
 import {Routes,Route, useNavigate} from 'react-router-dom'
 import Signin from './Signin';
 import Main from './Main';
+import api from './api/data'
 
 function App() {
+
+  useEffect(()=>{
+    const fetch=async()=>{
+      try{
+        const result=await api.get("/books")
+        setBooks(result.data)
+      }catch(err){
+          console.log(err.message)
+      }
+
+
+    }
+    fetch();
+  },[])
   
   const [Books,setBooks]=useState([])
   const [searchbook,setsearchbooks]=useState('')
@@ -20,26 +35,41 @@ function App() {
   const handelSubmit=async(e)=>{
     e.preventDefault()
     const id=Books.length ? Books[Books.length-1].id+1:1;
-    const date=new Date()
+    const date=new Date().toLocaleString();
     const addBooks={id,title:returnbookName,date,returndate:returnbookdate}
-    const books=[...Books,addBooks]
-    setBooks(books)
-    setreturnbook('')
-    setbookdate('')
-    navigate('/home')
-   
+    try{
+      const respond=await api.post('/books',addBooks)
+      const books=[...Books,respond.data]
+      setBooks(books)
+      setreturnbook('')
+      setbookdate('')
+      navigate('/home')
+      localStorage.setItem("libraryapp",JSON.stringify(addBooks))
+
+    }catch(err){
+      console.log(err.message)
+    }
+    
 
   }
   const DeleteBook=async(id)=>{
-    const listBooks=Books.filter((book)=> book.id!==id)
-    setBooks(listBooks)
+    try{
+      await api.delete(`/books/${id}`)
+      const listBooks=Books.filter((book)=> book.id!==id)
+      setBooks(listBooks)
+      localStorage.setItem("libraryapp",JSON.stringify(listBooks))
+
+    }catch(err){
+      console.log(err.message)
+    }
+
   }
 
   return (
 
     <div className="App">
 
-      <Header />
+      <Header title="Library ManagementApp" />
       <Nav searchbook={searchbook} setsearchbooks={setsearchbooks}/>
       <Routes>
       <Route path='/' element={<Main/>}></Route>
